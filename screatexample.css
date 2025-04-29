@@ -1,0 +1,22 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+  }
+  
+ul li a{
+    display:block;
+    color:#333333
+}
+.coontainer{
+    padding: 50px;
+    text-align:center;
+    background-color: blueviolet(231,146,146);
+    text-align: center;
+}
+div{
+display: grid;
+grid-template-columns: 33% 22% 764%;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>İşletme Anasayfa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #0077cc;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+            background-color: white;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        td:hover {
+            background-color: #cce7ff;
+            cursor: pointer;
+        }
+
+        th {
+            background-color: #005fa3;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>İşletme Adı</h1>
+    <p>Hoş Geldiniz!</p>
+</header>
+
+<main>
+    <h2>Ürünlerimiz</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Ürün Adı</th>
+                <th>Fiyat</th>
+                <th>Stok Durumu</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ürün 1</td>
+                <td>100</td>
+                <td>Stokta Var</td>
+            </tr>
+            <tr>
+                <td>Ürün 2</td>
+                <td>150</td>
+                <td>Stokta Yok</td>
+            </tr>
+        </tbody>
+    </table>
+</main>
+
+</body>
+</html>
