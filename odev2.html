@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Hayal Dünyası</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+      color: #333;
+      display: flex;
+      height: 100vh;
+    }
+
+    .sidebar {
+      width: 200px;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    }
+
+    .sidebar h2 {
+      font-size: 1.4em;
+      margin-bottom: 20px;
+      color: #6a1b9a;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      margin: 15px 0;
+    }
+
+    .sidebar ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .sidebar ul li a:hover {
+      color: #6a1b9a;
+    }
+
+    .main {
+      flex: 1;
+      overflow-y: auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header {
+      padding: 20px;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    header p {
+      font-size: 1.2em;
+      color: #fff;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin: 40px 0;
+    }
+
+    .gallery img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 20px auto;
+      width: 280px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .card p {
+      color: #6a1b9a;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #fff;
+    }
+
+    /* Yeni eklenen stil */
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin: 20px auto;
+      width: 80%;
+      max-width: 400px;
+    }
+
+    .contact-form input, .contact-form textarea {
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+
+    .contact-form button {
+      background-color: #6a1b9a;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    .contact-form button:hover {
+      background-color: #9c27b0;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="sidebar">
+    <h2>🚀 Menü</h2>
+    <ul>
+      <li><a href="#">🏠 Anasayfa</a></li>
+      <li><a href="#">📄 Hakkımızda</a></li>
+      <li><a href="#">📬 İletişim</a></li>
+    </ul>
+  </div>
+
+  <div class="main">
+    <header>
+      <h1>🌈 Hayal Dünyası</h1>
+      <p>Rüyaların gerçek olduğu renkli bir evrene hoş geldin.</p>
+    </header>
+
+    <section class="gallery">
+      <img src="resimler/resim1.jpg" alt="Resim 1">
+      <img src="resimler/resim2.jpg" alt="Resim 2">
+      <img src="resimler/resim3.jpg" alt="Resim 3">
+      <img src="resimler/resim4.jpg" alt="Resim 4">
+    </section>
+
+    <div class="card">
+      <h2>🎨 Hayal Gücü</h2>
+      <p>Hayal kur, çiz, renklendir.</p>
+    </div>
+    <div class="card">
+      <h2>🦄 Renkli Düşler</h2>
+      <p>Gerçekten daha güzel rüyalar burada başlar.</p>
+    </div>
+    <div class="card">
+      <h2>✨ Parlayan Fikirler</h2>
+      <p>Zihnindeki ışığı serbest bırak!</p>
+    </div>
+
+    <!-- Hakkımızda Bölümü -->
+    <section id="about">
+      <h2>📄 Hakkımızda</h2>
+      <p>Size hayalinizi bulmanıza yardımcı olmak istiyoruz. Hayal gücünüzü keşfedin, yaratıcı olun ve dünyanızı şekillendirin.</p>
+    </section>
+
+    <!-- İletişim Bölümü -->
+    <section id="contact">
+      <h2>📬 İletişim</h2>
+      <p>Bize ulaşmak için aşağıdaki formu kullanabilirsiniz.</p>
+      <form class="contact-form">
+        <input type="text" placeholder="Adınız" required>
+        <input type="email" placeholder="E-posta Adresiniz" required>
+        <textarea placeholder="Mesajınız" required></textarea>
+        <button type="submit">Gönder</button>
+      </form>
+    </section>
+
+    <footer>
+      &copy; 2025 Hayal Dünyası 🌟 Tüm hayaller seninle olsun.
+    </footer>
+  </div>
+
+</body>
+</html>
