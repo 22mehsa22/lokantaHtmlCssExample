@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>İlanlar</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+
+    header {
+      background-color: #1b332c;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #aaffaa;
+      font-size: 2.5rem;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 10px 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #ccffcc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      color: #66ff66;
+    }
+
+    .listings {
+      padding: 30px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .listings h2 {
+      color: #88ffaa;
+      border-bottom: 1px solid #333;
+      padding-bottom: 10px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background-color: #1e1e1e;
+      border-left: 6px solid #339966;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+
+    .card h3 {
+      color: #aaffaa;
+      margin-top: 0;
+    }
+
+    .card p {
+      margin: 5px 0;
+      color: #dddddd;
+    }
+
+    .card span {
+      display: inline-block;
+      background: #333;
+      padding: 4px 10px;
+      border-radius: 4px;
+      margin-top: 8px;
+      color: #66ff66;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      background-color: #1b332c;
+      color: #aaa;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 0.9rem;
+    }
+
+    .category-button {
+      background-color: #339966;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1.2rem;
+    }
+
+    .category-button:hover {
+      background-color: #66ff66;
+    }
+
+    .category-content {
+      display: none;
+    }
+
+    .category-content.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Emlak Şirketi</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Ana Sayfa</a></li>
+        <li><a href="ilanlar.html">İlanlar</a></li>
+        <li><a href="iletisim.html">İletişim</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="listings">
+    <h2>İlanlar</h2>
+
+    <!-- Kategoriler -->
+    <div>
+      <button class="category-button" onclick="showCategory('satilik')">Satılık Evler</button>
+      <button class="category-button" onclick="showCategory('kiralik')">Kiralık Evler</button>
+      <button class="category-button" onclick="showCategory('dukkanlar')">Dükkanlar</button>
+    </div>
+
+    <!-- Satılık Evler Kategorisi -->
+    <div id="satilik" class="category-content">
+      <h2>Satılık Evler</h2>
+
+      <div class="card">
+        <h3>3+1 Geniş Aile Dairesi</h3>
+        <p><strong>Konum:</strong> İstanbul, Bahçelievler</p>
+        <p><strong>Alan:</strong> 130 m²</p>
+        <p><strong>Banyo:</strong> 2 | <strong>Isınma:</strong> Doğalgaz Kombi</p>
+        <p><strong>Fiyat:</strong> 950.000 TL</p>
+        <span>Satılık</span>
+      </div>
+
+      <div class="card">
+        <h3>4+1 Müstakil Villa</h3>
+        <p><strong>Konum:</strong> Muğla, Bodrum</p>
+        <p><strong>Alan:</strong> 220 m²</p>
+        <p><strong>Banyo:</strong> 3 | <strong>Bahçe:</strong> Var | <strong>Otopark:</strong> Var</p>
+        <p><strong>Fiyat:</strong> 4.200.000 TL</p>
+        <span>Satılık</span>
+      </div>
+    </div>
+
+    <!-- Kiralık Evler Kategorisi -->
+    <div id="kiralik" class="category-content">
+      <h2>Kiralık Evler</h2>
+
+      <div class="card">
+        <h3>1+1 Öğrenci Dairesi</h3>
+        <p><strong>Konum:</strong> Eskişehir, Odunpazarı</p>
+        <p><strong>Alan:</strong> 55 m²</p>
+        <p><strong>Banyo:</strong> 1 | <strong>Mobilyalı:</strong> Evet</p>
+        <p><strong>Kira:</strong> 4.500 TL / Aylık</p>
+        <span>Kiralık</span>
+      </div>
+
+      <div class="card">
+        <h3>2+1 Geniş Kiralık</h3>
+        <p><strong>Konum:</strong> İzmir, Karşıyaka</p>
+        <p><strong>Alan:</strong> 100 m²</p>
+        <p><strong>Banyo:</strong> 1 | <strong>Balkon:</strong> Var</p>
+        <p><strong>Kira:</strong> 7.000 TL / Aylık</p>
+        <span>Kiralık</span>
+      </div>
+    </div>
+
+    <!-- Dükkanlar Kategorisi -->
+    <div id="dukkanlar" class="category-content">
+      <h2>Dükkanlar</h2>
+
+      <div class="card">
+        <h3>Merkezde 100 m² Dükkan</h3>
+        <p><strong>Konum:</strong> İstanbul, Beyoğlu</p>
+        <p><strong>Alan:</strong> 100 m²</p>
+        <p><strong>Kira:</strong> 15.000 TL / Aylık</p>
+        <span>Kiralık</span>
+      </div>
+
+      <div class="card">
+        <h3>Satılık Dükkan</h3>
+        <p><strong>Konum:</strong> Ankara, Çankaya</p>
+        <p><strong>Alan:</strong> 80 m²</p>
+        <p><strong>Fiyat:</strong> 1.200.000 TL</p>
+        <span>Satılık</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Emlak Şirketi</p>
+  </footer>
+
+  <script>
+    function showCategory(category) {
+      // Tüm kategorileri gizle
+      const allCategories = document.querySelectorAll('.category-content');
+      allCategories.forEach(cat => cat.classList.remove('active'));
+
+      // Seçilen kategoriyi göster
+      const activeCategory = document.getElementById(category);
+      if (activeCategory) {
+        activeCategory.classList.add('active');
+      }
+    }
+  </script>
+</body>
+</html>

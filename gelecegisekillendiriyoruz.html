@@ -1,0 +1,24 @@
+const quotes = [
+  "Başlamak için mükemmel olmak zorunda değilsin, ama mükemmel olmak için başlamak zorundasın.",
+  "Hayat, cesur olana ödül verir.",
+  "Bugün yapacağın küçük bir adım, yarın büyük bir fark yaratabilir.",
+  "Başarı, konfor alanının dışında başlar.",
+  "Düşüncelerinize dikkat edin; kelimelere dönüşür.",
+  "Her yeni gün, yeni bir başlangıçtır.",
+  "Kendine inan, her şey mümkün.",
+  "Zorluklar, seni daha güçlü yapar."
+];
+
+const colors = [
+  "#f9d423", "#fc913a", "#ff4e50", "#e55d87", "#6a82fb", "#fc5c7d", "#43cea2", "#185a9d"
+];
+
+function newQuote() {
+  const quote = quotes[Math.floor(Math.random() * quotes.length)];
+  const color = colors[Math.floor(Math.random() * colors.length)];
+  document.getElementById('quoteText').textContent = quote;
+  document.getElementById('quoteCard').style.background = color;
+}
+
+// Sayfa yüklenince otomatik bir söz göster
+window.onload = newQuote;

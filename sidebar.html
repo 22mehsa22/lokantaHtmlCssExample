@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Sidebar Örneği</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      display: flex;
+      background-color: #121212; /* Siyah arka plan */
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+      width: 200px;
+      height: 100vh;
+      background-color: #333; /* Gri sidebar */
+      color: #fff;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .sidebar h2 {
+      color: #f1f1f1; /* Açık gri başlık */
+    }
+
+    .sidebar a {
+      display: block;
+      color: #ccc; /* Gri tonlarında metin */
+      text-decoration: none;
+      margin: 10px 0;
+      font-weight: bold;
+    }
+
+    .sidebar a:hover {
+      color: #ffffff; /* Beyaz renk üzerine gelince */
+    }
+
+    /* ANA İÇERİK */
+    .content {
+      flex: 1;
+      padding: 20px;
+      color: white;
+      display: none;
+    }
+
+    .content.active {
+      display: block;
+    }
+
+    .about, .contact {
+      display: none;
+    }
+
+    .about.active, .contact.active {
+      display: block;
+    }
+
+    /* İçerik başlıkları */
+    .content h1 {
+      color: #f1f1f1; /* Açık gri başlık */
+    }
+
+    .content p {
+      color: #ccc; /* Gri metin */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sidebar">
+    <h2>Menü</h2>
+    <a href="#" onclick="showContent('home')">Ana Sayfa</a>
+    <a href="#" onclick="showContent('about')">Hakımızda</a>
+    <a href="#" onclick="showContent('contact')">İletişim</a>
+  </div>
+
+  <div class="content home active">
+    <h1>Hoş Geldiniz</h1>
+    <p>Bu örnekte sidebar siyah ve gri tonlarında tasarlandı. Ana sayfaya hoş geldiniz!</p>
+  </div>
+
+  <div class="content about">
+    <h1>Hakımızda</h1>
+    <p>Biz, en güvenilir emlak çözümleri sunan bir şirketiz. Müşteri memnuniyeti bizim için ön plandadır.</p>
+  </div>
+
+  <div class="content contact">
+    <h1>İletişim</h1>
+    <p><strong>Telefon:</strong> +90 555 555 5555</p>
+    <p><strong>Adres:</strong> İstanbul, Türkiye</p>
+  </div>
+
+  <script>
+    function showContent(page) {
+      // Tüm içerik bölümlerini gizle
+      const contents = document.querySelectorAll('.content');
+      contents.forEach(content => content.classList.remove('active'));
+      
+      // Seçilen sayfayı göster
+      const activePage = document.querySelector(`.${page}`);
+      if (activePage) {
+        activePage.classList.add('active');
+      }
+    }
+  </script>
+
+</body>
+</html>
