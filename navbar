@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Sitatik</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --pembe: #ff6fb5;
+      --turuncu: #ffb86f;
+      --koyu: #2c2c54;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fefefe;
+      scroll-behavior: smooth;
+    }
+
+    .navbar {
+      background: linear-gradient(45deg, var(--pembe), var(--turuncu));
+    }
+
+    .navbar .nav-link {
+      color: white !important;
+      font-weight: 500;
+    }
+
+    .navbar .nav-link:hover {
+      color: var(--koyu) !important;
+      background-color: rgba(255,255,255,0.1);
+      border-radius: 5px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--turuncu), var(--pembe));
+      color: white;
+      padding: 100px 0;
+      text-align: center;
+    }
+
+    section {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      color: var(--koyu);
+      font-weight: 600;
+    }
+
+    footer {
+      background-color: var(--koyu);
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">Sitatik</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#anasayfa">Anasayfa</a></li>
+        <li class="nav-item"><a class="nav-link" href="#hizmetler">Hizmetler</a></li>
+        <li class="nav-item"><a class="nav-link" href="#iletisim">İletişim</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Anasayfa -->
+<section id="anasayfa" class="hero">
+  <div class="container">
+    <h1 class="display-4">Hoş Geldiniz Sitatik'e</h1>
+    <p class="lead mt-3">Ruhunuza ilham verecek alıntılar, hizmetler ve içerikler</p>
+  </div>
+</section>
+
+<!-- Hizmetler -->
+<section id="hizmetler">
+  <div class="container">
+    <h2 class="section-title text-center mb-4">Hizmetlerimiz</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card shadow-sm border-0">
+          <div class="card-body">
+            <h5 class="card-title">Motivasyon Sözleri</h5>
+            <p class="card-text">Gününüzü aydınlatacak etkileyici sözler</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mt-4 mt-md-0">
+        <div class="card shadow-sm border-0">
+          <div class="card-body">
+            <h5 class="card-title">Kategorilere Göre Arama</h5>
+            <p class="card-text">Felsefe, aşk, başarı gibi kategorilerde gezinin</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mt-4 mt-md-0">
+        <div class="card shadow-sm border-0">
+          <div class="card-body">
+            <h5 class="card-title">Haftalık Bülten</h5>
+            <p class="card-text">Her hafta e-posta ile en iyi sözler elinizde</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- İletişim -->
+<section id="iletisim" class="bg-light">
+  <div class="container">
+    <h2 class="section-title text-center mb-4">İletişim</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form>
+          <div class="mb-3">
+            <label for="ad" class="form-label">Adınız</label>
+            <input type="text" class="form-control" id="ad" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">E-posta</label>
+            <input type="email" class="form-control" id="email" required>
+          </div>
+          <div class="mb-3">
+            <label for="mesaj" class="form-label">Mesajınız</label>
+            <textarea class="form-control" id="mesaj" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="background-color: var(--pembe); border: none;">Gönder</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <p class="mb-0">&copy; 2025 Sitatik. Tüm hakları saklıdır.</p>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
